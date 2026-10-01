@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Astrologer Gouotam - Numerology, Name & Business Name Analysis">
+  <title>Astrologer Gouotam - Numerology & Astro Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars-overlay"></div>
+
+  <header class="hero-section" id="home">
+    <div class="banner-container">
+      <img src="banner.jpg" alt="Astrologer Gouotam" class="banner-img">
+    </div>
+  </header>
+
+  <section class="action-bar">
+    <a href="tel:9051759636" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+    <a href="https://wa.me/919051759636?text=Hello%2C%20I%20would%20like%20to%20contact%20you%20for%20numerology%20consultation." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="#checker" class="btn btn-check"><i class="fas fa-calculator"></i> Numerology Check</a>
+  </section>
+
+  <main class="content-section">
+    <h2 class="section-title">Our Special Services</h2>
+    <div class="gold-line"></div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon-box"><i class="fas fa-sort-numeric-up-alt"></i></div>
+        <h3>Numerology</h3>
+        <p>Accurate guidance and overall life improvement through the proper analysis of your date of birth and name numbers.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-box"><i class="fas fa-signature"></i></div>
+        <h3>Name & Business Correction</h3>
+        <p>Name, business and branding analysis with balanced spelling suggestions for financial growth.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+        <h3>Finance & Career Guidance</h3>
+        <p>Numerology-based guidance for business progress, financial obstacles and career planning.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon-box"><i class="fas fa-gem"></i></div>
+        <h3>Gemstone & Remedy Consultation</h3>
+        <p>Guidance on suitable gemstones and traditional remedies based on planetary and numerological considerations.</p>
+      </div>
+    </div>
+
+    <section id="checker" class="checker-section">
+      <h2 class="section-title">Mobile & Name Numerology Checker</h2>
+      <div class="gold-line"></div>
+      <div class="checker-card">
+        <div class="eyebrow">COMPLETE NUMEROLOGY REPORT</div>
+        <h2>Enter Your Details</h2>
+        <p class="checker-intro">Enter your Name, Date of Birth and Mobile Number to generate a complete report. You can also check a Company / Business Name separately.</p>
+        <form id="checkerForm" novalidate autocomplete="off">
+          <div class="fields">
+            <label class="wide-label">Full Name
+              <input id="name" type="text" maxlength="80" placeholder="Enter your full name" autocomplete="off">
+            </label>
+            <label>Day
+              <input id="day" inputmode="numeric" maxlength="2" placeholder="DD" autocomplete="off">
+            </label>
+            <label>Month
+              <input id="month" inputmode="numeric" maxlength="2" placeholder="MM" autocomplete="off">
+            </label>
+            <label>Year
+              <input id="year" inputmode="numeric" maxlength="4" placeholder="YYYY" autocomplete="off">
+            </label>
+            <label class="wide-label">10-Digit Mobile Number
+              <input id="mobile" inputmode="numeric" maxlength="10" placeholder="10 digit mobile number" autocomplete="off">
+            </label>
+            <label class="wide-label">Company / Business Name <span class="optional">(Optional)</span>
+              <input id="company" type="text" maxlength="100" placeholder="Enter company / business name to check" autocomplete="off">
+            </label>
+          </div>
+          <button class="primary" type="submit"><i class="fas fa-wand-magic-sparkles"></i> CHECK & GENERATE COMPLETE REPORT</button>
+          <div id="error" class="error" role="alert"></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="result" class="hidden">
+      <div class="report-head">
+        <div>
+          <div class="eyebrow">YOUR COMPLETE REPORT</div>
+          <h2 id="displayName">—</h2>
+          <p><b>DOB:</b> <span id="displayDob">—</span> &nbsp; <b>Mobile:</b> <span id="displayMobile">—</span></p>
+        </div>
+        <button class="print" type="button" onclick="window.print()"><i class="fas fa-print"></i> Print / Save PDF</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><small>Mulank</small><strong id="mulank">—</strong></div>
+        <div class="stat"><small>Bhagyank</small><strong id="bhagyank">—</strong></div>
+        <div class="stat"><small>Name Compound</small><strong id="nameCompound">—</strong></div>
+        <div class="stat"><small>Name Root</small><strong id="nameRoot">—</strong></div>
+        <div class="stat"><small>Mobile Total</small><strong id="mobileTotal">—</strong></div>
+        <div class="stat"><small>Mobile Energy</small><strong id="mobileEnergy">—</strong></div>
+        <div class="stat company-stat"><small>Company Compound</small><strong id="companyCompound">—</strong></div>
+      </div>
+
+      <div class="report-grid">
+        <article class="report-card wide highlight-card">
+          <div class="eyebrow">NUMEROLOGY DETAILS REPORT</div>
+          <h3 id="comboHeading">Mulank + Bhagyank — Complete Details</h3>
+          <div class="details-grid">
+            <div class="detail"><span>Ruling Combination</span><strong id="ruling">—</strong></div>
+            <div class="detail"><span>Lucky Numbers</span><strong id="luckyNumbers">—</strong></div>
+            <div class="detail"><span>Unlucky / Challenging Numbers</span><strong id="unluckyNumbers">—</strong></div>
+            <div class="detail"><span>Lucky Days</span><strong id="luckyDays">—</strong></div>
+            <div class="detail"><span>Lucky Colours</span><strong id="luckyColors">—</strong></div>
+            <div class="detail"><span>Lucky Gemstones</span><strong id="luckyGems">—</strong></div>
+            <div class="detail"><span>Lucky Name Numbers</span><strong id="luckyDetailNameNumbers">—</strong></div>
+            <div class="detail"><span>Business Name Compatibility</span><strong id="luckyBusinessNameNumbers">—</strong></div>
+          </div>
+          <div class="source-box"><b>General Summary</b><p id="comboSummary">—</p><p id="comboCareer" class="muted">—</p></div>
+        </article>
+        <article class="report-card">
+          <div class="eyebrow">DOB ANALYSIS</div><h3>Mulank + Bhagyank</h3><div class="big-pair" id="combo">—</div>
+          <p>The combination-specific details above are based on this exact Mulank–Bhagyank combination.</p>
+        </article>
+        <article class="report-card">
+          <div class="eyebrow">MOBILE ANALYSIS</div><h3>Mobile Energy</h3><div id="mobileStatus" class="status">—</div>
+          <p><b>Formula:</b> <span id="mobileFormula">—</span></p><p><b>Lucky mobile energies:</b> <span id="luckyMobile">—</span></p>
+          <p><b>Unlucky / challenging mobile energies:</b> <span id="unluckyMobile">—</span></p><p><b>Suggested total(s):</b> <span id="suggested">—</span></p><p id="mobileAdvice" class="muted"></p>
+        </article>
+        <article class="report-card wide">
+          <div class="eyebrow">NAME ANALYSIS</div><h3>Name Number Compatibility</h3><div id="nameStatus" class="status">—</div>
+          <div class="two-col"><div class="mini"><small>Reduced Name Number</small><strong id="nameRootVerdict">—</strong></div><div class="mini"><small>Compound Name Number</small><strong id="nameCompoundVerdict">—</strong></div></div>
+          <p><b>Lucky reduced name numbers:</b> <span id="luckyNameRoots">—</span></p><p><b>Lucky name compound numbers:</b> <span id="luckyNameCompounds">—</span></p>
+          <div class="source-box"><b>Compound reference:</b><p id="nameMeaning">—</p><p id="nameRule" class="muted">—</p></div>
+        </article>
+        <article id="companyReport" class="report-card wide hidden">
+          <div class="eyebrow">COMPANY NAME ANALYSIS</div><h3>Company Name Compatibility</h3><div id="companyStatus" class="status">—</div>
+          <div class="two-col"><div class="mini"><small>Company Name</small><strong id="companyDisplay">—</strong></div><div class="mini"><small>Compound Number</small><strong id="companyCompoundDetail">—</strong></div><div class="mini"><small>Root Number</small><strong id="companyRoot">—</strong></div><div class="mini"><small>Business Compatibility Rule</small><strong id="companyLuckyNumbers">—</strong></div></div>
+          <div class="source-box"><b>Company Name Result</b><p id="companyVerdictText">—</p><p id="companySuggestion" class="muted">—</p></div>
+        </article>
+        <article class="report-card wide">
+          <div class="eyebrow">MOBILE COMPOUND</div><h3>Mobile Compound Number: <span id="mobileCompoundNumber">—</span></h3><p><b id="mobileCompoundTitle">—</b></p><div class="source-box"><p id="mobileCompoundMeaning">—</p></div>
+        </article>
+        <article class="report-card wide">
+          <div class="eyebrow">2-DIGIT COMBINATION ANALYSIS</div><h3>Mobile Number Pair Report</h3><p class="muted">Documented pair meanings are shown from the supplied mobile numerology material.</p><div id="pairList" class="pair-list"></div>
+        </article>
+        <article class="report-card wide note"><h3>Important Note</h3><p>Numerology is a traditional belief system. This report reproduces the calculation and reference-based numerology material built into this website. It is not a guaranteed prediction and should not be treated as medical, legal or financial advice.</p></article>
+      </div>
+      <button class="secondary" type="button" onclick="document.getElementById('checkerForm').reset();document.getElementById('result').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});">CHECK ANOTHER NUMBER</button>
+    </section>
+
+    <div class="contact-card">
+      <h2>Contact Details</h2>
+      <p class="phone-number"><i class="fas fa-mobile-alt"></i> +91 90517 59636</p>
+      <p class="service-hours"><i class="fas fa-clock"></i> Call or WhatsApp for in-person and online consultations</p>
+      <div class="cta-buttons"><a href="tel:9051759636" class="cta-btn"><i class="fas fa-phone"></i> 9051759636</a></div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Astrologer Gouotam. All Rights Reserved.</p></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
